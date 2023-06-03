@@ -1,0 +1,52 @@
+body {
+  background-image: url("cloudy.jpg");
+}
+.weather-app-wrapper {
+  max-width: 1000px;
+  margin: 80px auto;
+}
+.weather-app {
+  border: 2px solid transparent;
+  padding: 60px;
+  background-color: rgb(248, 242, 242);
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.temperature {
+  font-size: 80px;
+  margin-top: 40px;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  top: -42px;
+}
+
+.right-column {
+  border: 2px solid rgb(210, 207, 207);
+  border-radius: 15px;
+  margin-top: 80px;
+  margin-right: 0;
+  margin-left: 0;
+  padding: 20px;
+}
+
+.left-column {
+  margin: 150px auto;
+}
+
+.left-column ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

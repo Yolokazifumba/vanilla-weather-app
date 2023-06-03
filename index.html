@@ -15,28 +15,51 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
-    <div class="" container>
-      <div class="row">
-        <div class="col-8">
-          <h1>Cape Town</h1>
-          <ul>
-            <li> ☀️ 21°C|F</li>
-            <li>Mostly sunny</li>
-            <li>03 june Saturday 14:00 17°/21°C</li>
-          </ul>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-8">
+              <div class="left-column">
+                <h1>Cape Town</h1>
+                <div>Saturday 14:00</div>
+
+                <div class="clearfix temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+                    alt="clear"
+                    class="float-left"
+                  />
+                  <span class="float-left"> 21</span
+                  ><span class="units">°C | °F</span>
+                </div>
+                <ul>
+                  <li>Light rain showers</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="right-column">
+                <div class="weather-conditions-heading">Weather conditions</div>
+                <hr />
+                <ul>
+                  <li>Humidity: 73%</li>
+                  <hr />
+                  <li>Min Temparature: 17°C</li>
+                  <hr />
+                  <li>Max Temperature: 23°C</li>
+                  <hr />
+                  <li>Wind speed: 14km/h</li>
+                  <hr />
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-4">
-          <ul>
-            <li>Todays Weather conditions</li>
-            <hr />
-            <li>Humidity</li>
-            <hr />
-            <li>Wind speed</li>
-            <hr />
-            <li>rain Probability</li>
-            <hr />
-          </ul>
-        </div>
+        <small class="coder">
+          <a href="">open-source coded </a> by Yolokazi Fumba</small
+        >
       </div>
     </div>
 
