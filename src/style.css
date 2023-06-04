@@ -29,7 +29,7 @@ h1 {
   font-size: 16px;
   top: -42px;
 }
-#description {
+#description::first-letter {
   text-transform: capitalize;
 }
 .right-column {
