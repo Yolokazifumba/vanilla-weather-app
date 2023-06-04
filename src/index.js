@@ -44,6 +44,8 @@ function formatDate(timestamp) {
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#number");
 
+  celsiusTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -78,6 +80,28 @@ function handleSubmit(event) {
   let inputFieldElement = document.querySelector("#input-field");
   search(inputFieldElement.value);
 }
-search("Cape Town");
+
+let celsiusTemperature = null;
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+function convertFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#number");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function convertCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#number");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", convertFahrenheit);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", convertCelsius);
+
+search("Cape Town");
