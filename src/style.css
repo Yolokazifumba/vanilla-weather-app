@@ -56,3 +56,16 @@ li {
 a {
   text-decoration: none;
 }
+.temperature #celsius,
+#fahrenheit {
+  color: black;
+}
+
+#weather-forecast-day,
+#weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+#weatherforecast {
+  text-align: center;
+}
