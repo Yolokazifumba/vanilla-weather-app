@@ -66,6 +66,6 @@ a {
   opacity: 0.5;
 }
 
-#weatherforecast {
+.weatherforecast {
   text-align: center;
 }

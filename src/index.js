@@ -41,6 +41,33 @@ function formatDate(timestamp) {
   return `${day} ${month} ${date} ${hours}:${minutes} `;
 }
 
+function displayforecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["sat", "sun", "mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                <div id="weather-forecast-day">${day}</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+                  alt=""
+                  width="30px"
+                  id="weather-forecast-icon"
+                />
+                <div id="weather-forecast-temperature">
+                  <span id="weather-forecast-temperature-max">18/</span>
+                  <span id="weather-forecast-temperature-min">12</span>
+                </div>
+              </div>`;
+  });
+
+  forecastHTML = forecastHTML + "</div>";
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#number");
 
@@ -105,3 +132,4 @@ let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", convertCelsius);
 
 search("Cape Town");
+displayforecast();
